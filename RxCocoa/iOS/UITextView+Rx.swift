@@ -34,7 +34,7 @@ extension Reactive where Base: UITextView {
                 .map { _ in
                     return textView?.textStorage.string
                 }
-                ?? Observable.empty()
+                ?? Observable<String?>.empty()
             
             return textChanged
                 .startWith(text)
